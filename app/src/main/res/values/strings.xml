@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PW-Restro Kisok</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">cancel</string>
+    <string name="toast_3">Bluetooth device is unavailable</string>
+    <string name="toast_4">Bluetooth device not detected. Please open Bluetooth!</string>
+    <string name="toast_5">Not Found InnterPrinter!</string>
+    <string name="toast_6">Bluetooth connect failed!</string>
+</resources>

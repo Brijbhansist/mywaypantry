@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_marginBottom="@dimen/_2sdp"
+    android:id="@+id/main"
+    android:paddingLeft="@dimen/_8sdp"
+    android:paddingRight="@dimen/_8sdp"
+    android:paddingTop="@dimen/_1sdp"
+    android:paddingBottom="@dimen/_1sdp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp"
+            android:text="Choose a size"
+            android:id="@+id/mainTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="@dimen/_7sdp"
+            android:id="@+id/requiredText"
+            android:text="Requried - Choose 1."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            />
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:orientation="vertical"
+        app:spanCount="3"
+        android:id="@+id/gRv"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
