@@ -559,7 +559,7 @@ class ThankYouActivityChanged :BaseActivity() {
             )
         )
         printerArray.add(
-            TableItem(arrayOf("", "Tax("+TaxPer.toString()+" %): ","$" + totaltax.getTwoDigitVlaue()), intArrayOf(1, 1, 1), intArrayOf(0, 2, 2), false, 25))
+            TableItem(arrayOf("", "Tax("+TaxPer.toString()+"%): ","$" + totaltax.getTwoDigitVlaue()), intArrayOf(1, 1, 1), intArrayOf(0, 2, 2), false, 25))
 
         printerArray.add(TableItem(arrayOf( "--------------------------------------------"), intArrayOf(1), intArrayOf(0), false, 25))
 
@@ -604,6 +604,7 @@ class ThankYouActivityChanged :BaseActivity() {
             {
                 if(!AppPreferences.compDetail.get(0).KitchenPrinterQR.isNullOrEmpty()) {
                     val url=AppPreferences.compDetail.get(0).KitchenPrinterQR.toString()
+                    Log.e("url",url);
                     val policy = ThreadPolicy.Builder().permitAll().build()
                     StrictMode.setThreadPolicy(policy)
                     val imageurl: URL? = URL(url);
@@ -727,18 +728,6 @@ class ThankYouActivityChanged :BaseActivity() {
 
                 tt+="[L]<b>[L][L]Grand Total:[L]"+ "$" + (totaltax + totalPrice).getTwoDigitVlaue()+"</b>\n"
                 tt+="[C]-----------------------------------------------\n"
-//                if(!AppPreferences.compDetail.get(0).FooterName.isNullOrEmpty())
-//                {
-//                    tt+="[C]<b>"+AppPreferences.compDetail.get(0).FooterName+"</b>\n"
-//                }
-//                if(!AppPreferences.compDetail.get(0).FooterNote.isNullOrEmpty())
-//                {
-//                    tt+="[C]"+AppPreferences.compDetail.get(0).FooterNote+"\n"
-//                }
-//                if(!AppPreferences.compDetail.get(0).StorePromotion.isNullOrEmpty())
-//                {
-//                    tt+="[C]"+AppPreferences.compDetail.get(0).StorePromotion+"\n"
-//                }
                 tt+="[C]"+""+"\n"
                 tt+="[C]"+""+"\n"
                 printer.printFormattedTextAndCut(tt)
@@ -1048,7 +1037,7 @@ class ThankYouActivityChanged :BaseActivity() {
         )
         printerArray.add(
             TableItem(
-                arrayOf("", "SubTotal:", "$" + totalPrice.getTwoDigitVlaue()), intArrayOf(
+                arrayOf("", "Sub Total:", "$" + totalPrice.getTwoDigitVlaue()), intArrayOf(
                     1,
                     1,
                     1
