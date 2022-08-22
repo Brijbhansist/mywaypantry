@@ -35,13 +35,10 @@ class CartActivity : BaseActivity() {
     var list: ArrayList<CartDetailResponse.ResponseData> = arrayListOf()
     var adapter: CartAdapter? = null
     var cartDetailResponse: CartDetailResponse? = null
-
     var manufacturer = Build.MANUFACTURER
     var model = Build.MODEL
     var version = Build.VERSION.SDK_INT
     var versionRelease = Build.VERSION.RELEASE
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         window.decorView.systemUiVisibility = (View.SYSTEM_UI_FLAG_IMMERSIVE
@@ -89,7 +86,6 @@ class CartActivity : BaseActivity() {
                     )
                 }
             }
-
         })
         rvCart.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         rvCart.adapter = adapter
@@ -180,21 +176,6 @@ class CartActivity : BaseActivity() {
 
     fun showPopUp()
     {
-//        KAlertDialog(this@CartActivity, KAlertDialog.SUCCESS_TYPE)
-//            .setTitleText("")
-//            .setContentText("<big><big>1 Item deleted from the cart.</big></big>")
-//            .setConfirmText("Ok")
-//            .setConfirmClickListener { sDialog -> sDialog.dismissWithAnimation()
-//                if (list.size == 0) {
-//                    makeToast("Cart is empty")
-//                    AppPreferences.cartAutoId = "0"
-//                    AppPreferences.cartItemAutoId = "0"
-//                    AppPreferences.cartCount = 0
-//                    onBackPressed()
-//                }
-//            }
-//            .show()
-
         val view: View = LayoutInflater.from(this@CartActivity)
             .inflate(R.layout.report_problem_dialog_single_btn, null)
         val alertDialog =
