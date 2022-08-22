@@ -659,52 +659,6 @@ class ThankYouActivityChanged :BaseActivity() {
                         tt+="[C]<b>"+AppPreferences.compDetail.get(0).CompanyName+"</b>\n"
                     }
 
-//                    if(AppPreferences.compDetail.get(0).Address.isNullOrEmpty())
-//                    {
-//
-//                    }
-//                    else
-//                    {
-//                        if(AppPreferences.compDetail.get(0).Address.size>0)
-//                        {
-//                            tt+="[C]"+AppPreferences.compDetail.get(0).Address.get(0).Address+"\n"
-//                        }
-//
-//                    }
-//                    if(AppPreferences.compDetail.get(0).Address.isNullOrEmpty())
-//                    {
-//
-//                    }
-//                    else
-//                    {
-//                        if(AppPreferences.compDetail.get(0).Address.size>0)
-//                        {
-//                            var msg=""
-//                            if(!AppPreferences.compDetail.get(0).Address.get(0).City.isNullOrEmpty())
-//                            {
-//                                msg=msg+AppPreferences.compDetail.get(0).Address.get(0).City
-//                            }
-//                            if(!AppPreferences.compDetail.get(0).Address.get(0).State.isNullOrEmpty())
-//                            {
-//                                msg=msg+", "+AppPreferences.compDetail.get(0).Address.get(0).State
-//                            }
-//                            if(!AppPreferences.compDetail.get(0).Address.get(0).ZipCode.isNullOrEmpty())
-//                            {
-//                                msg=msg+", "+AppPreferences.compDetail.get(0).Address.get(0).ZipCode
-//                            }
-//
-//                            tt+="[C]"+msg+"\n"
-//                        }
-//                    }
-
-//                    if(!AppPreferences.compDetail.get(0).PhoneNo1.isNullOrEmpty())
-//                    {
-//                        tt+="[C]Phone: "+AppPreferences.compDetail.get(0).PhoneNo1+"\n"
-//                    }
-//                    if(!AppPreferences.compDetail.get(0).Website.isNullOrEmpty())
-//                    {
-//                        tt+="[C]<b>"+AppPreferences.compDetail.get(0).Website+"</b>\n"
-//                    }
                     tt+="[C]<font size='big'>KIOSK</font>\n"
                 }
 
