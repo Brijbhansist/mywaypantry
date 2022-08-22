@@ -56,14 +56,13 @@ class CartActivity : BaseActivity() {
             override fun onItemClick(obj: Any, obj2: Any, position: Int, task: Int) {
                 if (task == 1) {
                     val data = obj as CartDetailResponse.ResponseData
-
                     val view: View = LayoutInflater.from(this@CartActivity)
                         .inflate(R.layout.report_problem_dialog, null)
                     val alertDialog =
                         android.app.AlertDialog.Builder(this@CartActivity).create()
 //                    alertDialog.setTitle("Please login")
                     alertDialog.setCancelable(false)
-                    //        alertDialog.setMessage("Please Enter your Mobile Number");
+                    // alertDialog.setMessage("Please Enter your Mobile Number");
 
                     val msg=view.findViewById<View>(R.id.msg) as AppCompatTextView
                     msg.text = "Are you sure to Delete this Item?"
@@ -113,10 +112,7 @@ class CartActivity : BaseActivity() {
                 alertDialog.setView(view)
                 alertDialog.show()
             }
-
-
         }
-
         addmore.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             // start your next activity
@@ -124,12 +120,10 @@ class CartActivity : BaseActivity() {
             // onBackPressed()
         }
     }
-
     override fun onWindowFocusChanged(hasFocus: Boolean) {
         super.onWindowFocusChanged(hasFocus)
         if (hasFocus) hideSystemUI()
     }
-
     private fun hideSystemUI() {
         // Enables regular immersive mode.
         // For "lean back" mode, remove SYSTEM_UI_FLAG_IMMERSIVE.
@@ -144,8 +138,6 @@ class CartActivity : BaseActivity() {
                 or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                 or View.SYSTEM_UI_FLAG_FULLSCREEN)
     }
-
-
     private fun deleteApicall(
         data: CartDetailResponse.ResponseData,
         position: Any
@@ -173,7 +165,6 @@ class CartActivity : BaseActivity() {
             makeToast(it)
         })
     }
-
     fun showPopUp()
     {
         val view: View = LayoutInflater.from(this@CartActivity)
@@ -196,7 +187,6 @@ class CartActivity : BaseActivity() {
         super.onResume()
         getCartDetailsApiCall()
     }
-
     fun setTotal() {
         var totalPrice = 0.0
         var totaltax = 0.0
@@ -204,13 +194,9 @@ class CartActivity : BaseActivity() {
             totalPrice += it.itemTotal!!.toDouble()
             totaltax+=((it.itemTotal*it.TaxPer!!)/100)
         }
-
         tvSubTotalAmttax.text = "$" + totaltax.getTwoDigitVlaue()
         tvSubTotalAmt.text = "$${(totaltax+totalPrice).getTwoDigitVlaue()}"
-
     }
-
-
     fun getCartDetailsApiCall() {
         val sharedPreference =  getSharedPreferences("Location", Context.MODE_PRIVATE)
         AppPreferences.saveCartFromApi= ArrayList<CartDetailResponse.ResponseData>()
