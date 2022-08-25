@@ -184,7 +184,7 @@ class MainActivity : NavigationActivity() {
             var data = CateResonse.ResponseData(
                 0,
                 "View Full Menu",
-                "https://test.lucky7delimtholly.com/images/food.png"
+                "https://mywaypantry.com/images/food.png"
             )
             dataList.add(data)
             dataList.addAll(it.d.responseData)

@@ -613,7 +613,6 @@ class ThankYouActivityChanged :BaseActivity() {
                     conn.connect()
                     val `is`: InputStream = conn.getInputStream()
                     var bitmap = BitmapFactory.decodeStream(`is`)
-
                     SunmiPrintHelper.getInstance().setAlign(1)
                     SunmiPrintHelper.getInstance().printBitmap(bitmap,0)
 

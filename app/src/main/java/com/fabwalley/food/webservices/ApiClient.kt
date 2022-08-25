@@ -10,17 +10,16 @@ import java.io.IOException
 import java.util.concurrent.TimeUnit
 
 object ApiClient {
-
     private val readTimeOut: Long = 50
     private val connectionTimeOut: Long = 50
     //  val BASE_URL =" https://mypbelleville.com/api/" // Belleville Live  API 28/07/2022
-      val BASE_URL="http://testmyp02.progultra.com/api/" // Belleville Test  API 28/07/2022
-    // val BASE_URL="https://mypglendora.com/api/" // Glendora Live API 28/07/2022
-    //val BASE_URL=" https://test.mypglendora.com/api/" // Glendora Test API 28/07/2022
+   //   val BASE_URL="http://testmyp02.progultra.com/api/" // Belleville Test  API 28/07/2022
+   //  val BASE_URL="https://mypglendora.com/api/" // Glendora Live API 28/07/2022
+  // val BASE_URL=" https://test.mypglendora.com/api/" // Glendora Test API 28/07/2022
     // val BASE_URL="https://pantry1foodmart.com/api/" // foodMart Live API 28/07/2022
     //val BASE_URL = "http://testmyp02.progultra.com/API/" // Not avilabile foodMart Test  API 28/07/2022
-    //val BASE_URL="https://mywaypantry.com/api/" // Manalapan Live API 28/07/2022
-    //val  BASE_URL=" http://testmyp01.progultra.com/api/" // Manalapan Test API 28/07/2022
+     val BASE_URL="https://mywaypantry.com/api/" // Manalapan Live API 28/07/2022
+   // val  BASE_URL=" http://testmyp01.progultra.com/api/" // Manalapan Test API 28/07/2022
       fun getClient(context: Application): ApiService {
         val okHttpClient = OkHttpClient.Builder().run {
             addInterceptor(object : Interceptor {

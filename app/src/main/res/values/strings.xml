@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PW-Restro Kisok</string>
+    <string name="app_name">PW-Restro Kiosk</string>
     <string name="ok">Ok</string>
     <string name="cancel">cancel</string>
     <string name="toast_3">Bluetooth device is unavailable</string>

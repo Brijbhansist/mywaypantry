@@ -74,7 +74,7 @@ class MainCateAdapter(val activity: Context?, val itemClick: OnItemClickListner)
             return
         }
         if (imageUrl == null) {
-            imageView.setImageResource(R.drawable.no_image)
+            imageView.setImageResource(R.drawable.fullmenu)
             if (progressBar != null) progressBar.visibility = View.GONE
             return
         }
@@ -101,7 +101,7 @@ class MainCateAdapter(val activity: Context?, val itemClick: OnItemClickListner)
                 if (progressBar != null) progressBar.visibility = View.GONE
                 return false
             }
-        }).placeholder(R.drawable.no_image)
+        }).placeholder(R.drawable.fullmenu)
             .into(imageView)
     }
 
