@@ -72,7 +72,6 @@ class CartAdapter(var isCart: Boolean, listeners: OnItemClickListner) :
                 }
                 return false
             }
-
             override fun onResourceReady(
                 resource: Drawable?,
                 model: Any,

@@ -632,7 +632,7 @@ class ThankYouActivityChanged :BaseActivity() {
         }
 
         Handler().postDelayed(Runnable {
-            kitchenPrinter()
+//            kitchenPrinter()
         }, 100)
 
     }

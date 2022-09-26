@@ -38,7 +38,7 @@ object AppPreferences {
     var model = Build.MODEL
     var version = Build.VERSION.SDK_INT
     var versionRelease = Build.VERSION.RELEASE
-    const val appVersion= "4.0.0.2"
+    const val appVersion=com.fabwalley.food.BuildConfig.VERSION_NAME
     const val FcmToken = "PushToken"
      const val latlng = "123"
 //     const val appVersion = "V3.0"
